@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PublicComponent } from './public.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path:'', component: PublicComponent, children: [
@@ -18,6 +19,7 @@ const routes: Routes = [
     PublicComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     RouterModule.forChild(routes)
   ]
